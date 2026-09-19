@@ -23,7 +23,7 @@ spec:
     spec:
       containers:
         - name: backend
-          image: YOUR_DOCKERHUB_USERNAME/traveltripped-backend:latest
+          image: mihakov990/traveltripped-backend:latest
           imagePullPolicy: Always
           ports:
             - containerPort: 8080
