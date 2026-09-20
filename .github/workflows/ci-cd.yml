@@ -131,6 +131,11 @@ jobs:
     name: Deploy to Kubernetes
     runs-on: self-hosted
     needs: build-and-push
+
+    concurrency:
+      group: production-deploy
+      cancel-in-progress: true
+
     if: github.ref == 'refs/heads/main' && vars.ENABLE_DEPLOY == 'true'
     environment: production
 
