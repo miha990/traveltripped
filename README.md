@@ -19,3 +19,10 @@ TravelTripped is a full-stack web application for searching, planning, and organ
 - **Containerization**: Docker, Docker Compose
 - **Orchestration**: Kubernetes (Deployment, Service, Ingress, StatefulSet, HPA, ConfigMap, Secret, PVC)
 - **CI/CD**: GitHub Actions, DockerHub
+
+  ## 🌐 Deployment
+
+  The TravelTripped application is deployed on **Render** and is available online.
+
+  **Live Demo:**  
+  [TravelTripped](https://traveltripped-frontend.onrender.com/)
