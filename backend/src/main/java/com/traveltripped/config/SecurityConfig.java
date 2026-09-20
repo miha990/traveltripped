@@ -44,13 +44,13 @@ public class SecurityConfig {
             .csrf(csrf -> csrf.disable())
             .sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
             .authorizeHttpRequests(auth -> auth
-                .requestMatchers("/api/auth/**").permitAll()
-                .requestMatchers("/api/destinations/**").permitAll()
-                .requestMatchers("/api/hotels/**").permitAll()
-                .requestMatchers("/api/flights/**").permitAll()
-                .requestMatchers("/actuator/health").permitAll()
-                .anyRequest().authenticated()
-            )
+            .requestMatchers("/auth/**").permitAll()
+            .requestMatchers("/destinations/**").permitAll()
+            .requestMatchers("/hotels/**").permitAll()
+            .requestMatchers("/flights/**").permitAll()
+            .requestMatchers("/actuator/health").permitAll()
+            .anyRequest().authenticated()
+        )
             .addFilterBefore(jwtAuthenticationFilter, UsernamePasswordAuthenticationFilter.class);
 
         return http.build();
